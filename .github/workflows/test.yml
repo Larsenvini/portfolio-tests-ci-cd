@@ -1,4 +1,4 @@
-name: Playwright & Selenium Tests
+name: Playwright Tests
 
 on:
   schedule:
@@ -10,8 +10,8 @@ on:
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
-  test:
-    timeout-minutes: 60
+  playwright_tests:
+    timeout-minutes: 30
     runs-on: ubuntu-latest
     steps:
       
@@ -38,5 +38,3 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 30
-
-      
